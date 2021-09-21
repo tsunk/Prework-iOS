@@ -1,6 +1,6 @@
-# Pre-work - Tip Calculator
+# Pre-work - Tip Me!
 
-Tip Calculator is a tip calculator application for iOS.
+Tip Me! is a tip calculator application for iOS.
 
 Submitted by: Katrina Tsun
 
