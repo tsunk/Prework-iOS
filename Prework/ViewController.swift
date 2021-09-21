@@ -9,15 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var BillAmountTextField: UITextField!
-    
     @IBOutlet weak var TipAmountLabel: UILabel!
-    
     @IBOutlet weak var TipControl: UISegmentedControl!
-    
+    @IBOutlet weak var PartyControl: UISegmentedControl!
+    @IBOutlet weak var PartyTotal: UILabel!
     @IBOutlet weak var TotalLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -37,6 +35,8 @@ class ViewController: UIViewController {
         let tipPercentages = [0.15, 0.18, 0.20]
         let tip = bill * tipPercentages[TipControl.selectedSegmentIndex]
         let total = bill + tip
+        let partySelection = [1.0, 2.0, 3.0, 4.0, 5.0]
+        let partyTotal = total/partySelection[PartyControl.selectedSegmentIndex]
         
         // Update Tip Amount Label
         
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         
         //Update Total Amount
         TotalLabel.text = String(format: "$%.2f", total)
-        
+        PartyTotal.text = String(format: "$%.2f", partyTotal)
     }
     
 }
